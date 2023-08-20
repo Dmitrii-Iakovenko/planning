@@ -1,0 +1,19 @@
+spring:
+    datasource:
+        url: jdbc:postgresql://localhost:5432/db_planning
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+    jpa:
+        hibernate:
+            dll-auto: create
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                temp:
+                    use_jdbc_metadata_defaults: false            
+
+logging:
+    level:
+        org:
+            hibernate:
+                type: trace
